@@ -1,0 +1,130 @@
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+.wrap {
+    width: 1000px;
+    margin: auto;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    padding-left: 100px;
+}
+h1 {
+    text-align: center;
+    position: relative;
+}
+h2 {
+    text-align: left;
+}
+h1 span {
+    text-align: center;
+    padding: 0 30px;
+    background: #fff;
+    /* letter-spacing: 30px; */
+    position: relative;
+    z-index: 2;
+}
+h1:before,
+h1:after {
+    content: '';
+    width: 1000px;
+    height: 1px;
+    background-color: #d39959;
+    position: absolute;
+    top: 20px;
+}
+h1:before {
+    left: -500px;
+}
+h1:after {
+    right: 0;
+}
+
+.resu_item h2 {
+    font-size: 26px;
+    color: #d39959;
+    letter-spacing: 5px;
+    text-align: left;
+    margin: 15px 0 20px 0;
+}
+
+.resu_item .list {
+    clear: both;
+}
+
+.resu_item .list li {
+    padding: 0 0 0 40px;
+    /* list-style: red; */
+    line-height: 28px;
+    position: relative;
+    font-size: 18px;
+}
+.resu_item .list li:before {
+    content: "●";
+    font-size: 16px;
+    color: #c58b4d;
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+.resu_item .list li.company {
+    font-weight: bold;
+    margin: 10px 0;
+}
+.resu_item .list li.tit {
+    font-weight: bold;
+    margin: 10px 0;
+}
+.resu_item .list li.company:before {
+    content: "";
+}
+
+.resu_item .list li .user_item{
+    float: left;
+    width: 300px;
+}
+
+@media screen and (max-width: 750px) {
+    .wrap {
+        width: 90%;
+        padding: 0 5% 0;
+    }
+    h1 span {
+        font-size: 25px;
+        padding: 0 20px;
+    }
+    .resu_item h2 {
+        font-size: 20px;
+        margin: 10px 0 15px 0;
+    }
+    .resu_item .list li {
+        padding: 0 0 0 20px;
+        font-size: 15px;
+    }
+    .resu_item .list li .user_item {
+        /* width: 50%;
+        white-space: nowrap; */
+    }
+    .resu_item .list li:before {
+        left: 0;
+    }
+}
